@@ -63,6 +63,12 @@ let appData = {
             let opt = promt("For something?", "");
             appData.optionalExpenses[i] = opt;
         }
+    },
+    chooseIncome: function() {
+        let items = prompt("What give income?(Use ,)", "");
+        appData.income = items.split(', ');
+        appData.income.push(prompt('Maybe something else?'));
+        appData.income.sort();
     }
 };
 
